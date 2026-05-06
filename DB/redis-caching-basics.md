@@ -7,23 +7,23 @@ Redis는 데이터를 디스크가 아닌 메모리(RAM)에 저장하는 Key-Val
 
 자주 쓰는 명령어
 ```
-# 문자열 저장 및 조회<br/>
-SET user:1:name "김철수" GET user:1:name<br/>
-# 만료 시간 설정 (초 단위)- 세션, 캐시에 필수<br/>
-SET token:abc123 "user_id:1" EX 3600 TTl token:abc123<br/>
-# 삭제<br/>
+# 문자열 저장 및 조회
+SET user:1:name "김철수" GET user:1:name
+# 만료 시간 설정 (초 단위)- 세션, 캐시에 필수
+SET token:abc123 "user_id:1" EX 3600 TTl token:abc123
+# 삭제
 DEL user:1:name
 ```
 
 PYTHON에서 사용하기
 ```
-# pip install redis<br/>
-import redis r = redis.Redis(host='localhost', port=6379, db=0)<br/>
-# 캐싱 패턴 - DB 조회 전 Redis 먼저 확인<br/>
-def get_user(user_id): cache_key = f"user:{user_id}<br/>
-# 캐시 히트 - DB 안 감<br/>
-user = db.query(f"SELECT * FROM users WHERE id={user_id}") r.set(cache_key, user, ex=300)<br/>
-# 5분 캐시<br/>
+# pip install redis
+import redis r = redis.Redis(host='localhost', port=6379, db=0)
+# 캐싱 패턴 - DB 조회 전 Redis 먼저 확인
+def get_user(user_id): cache_key = f"user:{user_id}
+# 캐시 히트 - DB 안 감
+user = db.query(f"SELECT * FROM users WHERE id={user_id}") r.set(cache_key, user, ex=300)
+# 5분 캐시
 return user
 ```
 
@@ -43,5 +43,5 @@ redis가 빛나는 상황
 > Rate Limiting - 요청 횟수를 카운트해서 초당 요청 수 제한.
 ```
 
-> **캐시 무효화가 핵심** 캐시된 데이터가 DB와 달라지는 순간이 문제다. 데이터가 수정될 때 관련 캐시 키를 지워주는 습관이 필요하다.<br/>
+> **캐시 무효화가 핵심** 캐시된 데이터가 DB와 달라지는 순간이 문제다. 데이터가 수정될 때 관련 캐시 키를 지워주는 습관이 필요하다.<br/><br/>
 > **키 네이밍 관례** 타입:id:필드 형식으로 계층적으로 짓는다. 예:user:1:profile, order:42:status
