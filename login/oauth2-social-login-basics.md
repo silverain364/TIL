@@ -6,10 +6,10 @@ OAuth 2.0은 사용자가 비밀번호를 우리 서비스에 주지 않고도 �
 우리 서버는 구글한테 "이 사람이 구글 계정을 가진 게 맞냐"라고 확인만 받으면 된다.
 
 ### 등장인물
-`Resource Owner` - 사용자. 구글 계정을 가진 사람을 지칭.
-`Client` - 우리가 만드는 서비스 (백엔드 서버).
-`Authorization Server` - 구글, 카카오 등 인증을 담당하는 서버.
-`Resourece Server` - 구글 이메일, 프로필 등 실제 데이터 보유 서버.
+`Resource Owner` - 사용자. 구글 계정을 가진 사람을 지칭.</br>
+`Client` - 우리가 만드는 서비스 (백엔드 서버).</br>
+`Authorization Server` - 구글, 카카오 등 인증을 담당하는 서버.</br>
+`Resourece Server` - 구글 이메일, 프로필 등 실제 데이터 보유 서버.</br>
 
 ### Authorization Code Flow
 1. 사용자가 "구글로 로그인" 클릭 → 구글 로그인 페이지로 리다이렉트
