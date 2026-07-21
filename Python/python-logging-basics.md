@@ -15,16 +15,16 @@
 ### print() VS logging
 print - 운영에 쓰이면 안 됨
 ```
-print("유저 로그인:", user_id)</br>
-print("에러 발생!")</br>
-# 레벨 없음, 파일 저장 안 됨</br>
+print("유저 로그인:", user_id)
+print("에러 발생!")
+# 레벨 없음, 파일 저장 안 됨
 # 타임스탬프 없음
 ```
 logging - 운영 표준
 ```
-logger.info("유저 로그인: %s", user_id)</br>
-logger.error("에러 발생", exc_info=True)</br>
-# 레벨, 시간, 파일명 자동 포함</br>
+logger.info("유저 로그인: %s", user_id)
+logger.error("에러 발생", exc_info=True)
+# 레벨, 시간, 파일명 자동 포함
 # 파일/외부 시스템에 저장 가능
 ```
 
