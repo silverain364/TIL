@@ -9,9 +9,9 @@ Spring은 강력하지마 XML 설정이 복잡하고 시작하기 어려움.</br
 Spring Boot는 설정 자동화 + 내장 톰캣 서버 포함 → 파일 하나로 바로 실행 가능. 지금은 Spring Boot가 사실상 표준이나 다름없다.
 
 ### Spring Boot 프로젝트 구조
-`Controller` : 요청을 받고 응답을 돌려주는 계층. URL과 함수를 연결.
-`Service` : 실제 비즈니스 로직이 있는 계층. 계산, 조건 처리 등.
-`Repository` : DB와 소통하는 계층. 데이터 저장·조회·삭제.
+`Controller` : 요청을 받고 응답을 돌려주는 계층. URL과 함수를 연결.<br/>
+`Service` : 실제 비즈니스 로직이 있는 계층. 계산, 조건 처리 등.<br/>
+`Repository` : DB와 소통하는 계층. 데이터 저장·조회·삭제.<br/>
 `Entity` : DB 테이블과 1:1 대응하는 클래스.
 
 > **start.spring.io에서 시작** : Spirng 프로젝트는 처음 만들 땐 start.spring.io에 접속해서 언어, 의존성을 고르고 zip을 다운받으면 된다. 직접 설정할 필요가 없다.</br>
