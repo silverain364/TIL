@@ -37,7 +37,7 @@ userRepsository.findAll() // SELECT *
 userRepository.deleteById(1L) //DELETE WHERE id = 1
 ```
 
-주요 어노테이션
+### 주요 어노테이션
 `@Entity` - DB 테이블과 매핑되는 클래스 선언.<br/>
 `@Id` - 기본키 필드 지정.<br/>
 `@GenerateValue` - PK 자동 생성 전략.<br/>
