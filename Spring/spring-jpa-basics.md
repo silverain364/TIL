@@ -25,7 +25,7 @@ class User(
 )
 ```
 
-Repository - db 조작은 여기서
+### Repository - db 조작은 여기서
 ```java
 import org.springframework.data.jpa.repository.JpaRepository
 
