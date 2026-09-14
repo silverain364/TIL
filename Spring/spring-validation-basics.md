@@ -29,7 +29,7 @@ data class CreateUserRequest(
   @field:Email(message = "이메일 형식이 올바르지 않습니다.")
   val email: String,
 
-  @field:Min(value = 0, message = "나이는 0 이상이어야 합니다.)
+  @field:Min(value = 0, message = "나이는 0 이상이어야 합니다.")
   val age: Int
 
 // Controller에서 @Valid 추가
